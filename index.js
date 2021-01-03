@@ -20,13 +20,12 @@ axios.get("https://coinmarketcap.com/").then((response) => {
   );
 
   //check if it's greater than 30K
-  if (priceAsNumber >= 30000) {
+  if (priceAsNumber >= 40000) {
     console.log("BTC reached 30K. Send a text message!");
     messagebird.messages.create(
       {
-        // To test the message working or not
         originator: "YOUR REGISTER NUMBER",
-        recipients: ["YOUR RESGISTER NUMBER"],
+        recipients: ["YOUR REGISTER NUMBER"],
         body: `Saurav, BTC is ${priceAsText} Buy Buy Buy!`,
       },
       function (err, response) {
@@ -37,6 +36,6 @@ axios.get("https://coinmarketcap.com/").then((response) => {
       }
     );
   } else {
-    console.log("BTC < 30K. Doing Nothing");
+    console.log("BTC < 40K. Doing Nothing");
   }
 });
