@@ -21,7 +21,7 @@ axios.get("https://coinmarketcap.com/").then((response) => {
 
   //check if it's greater than 30K
   if (priceAsNumber >= 40000) {
-    console.log("BTC reached 30K. Send a text message!");
+    console.log("BTC reached 40K. Send a text message!");
     messagebird.messages.create(
       {
         originator: "YOUR REGISTER NUMBER",
